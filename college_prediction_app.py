@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import torch
+
 
 st.set_page_config(page_title="home_page",page_icon="Digital Docter\IMG_20211110_171634.jpg")
 
@@ -15,6 +17,8 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.title("Predict the college based on your cut off")
 
+
+st.code(torch.cuda.is_available())
 
 
 df = pd.read_csv(r"college_cuttoff_all_years.csv")
